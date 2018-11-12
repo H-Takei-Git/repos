@@ -12,6 +12,10 @@
             padding: 10px;
             margin-bottom: 15px;
         }
+        .timestamp{
+            color: lightgray;
+            font-size: 
+        }
     </style>
 </head>
 <body>
@@ -28,8 +32,7 @@ while(($buff=fgets($fp))!=false){
     $Line = explode("\t",$buff);
     echo $Line[0];
     echo "|";
-    echo $Line[1];
-    echo(date("Y-m-d H:i:s",$Line[1]));
+    echo"<span class=\"timestamp\">".date("Y-m-d H:i:s",$Line[1])."</span>";
     echo "<br>";
 }
 fclose($fp);
